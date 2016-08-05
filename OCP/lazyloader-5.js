@@ -79,7 +79,7 @@ class LazyLoader {
 
     checkScroll() {
         this.lazyItems.filter(item => item.top > this.element.scrollTop + 50)
-            .forEach(item => item => {
+            .forEach(item => {
                 if (item.loaded) return;
                 new this.loader(item).load();
                 item.loaded = true;
